@@ -16,5 +16,28 @@ namespace FoodOrderingSystem
         {
             InitializeComponent();
         }
+
+        frmFood frmFood = new frmFood();       
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
+
+            //menu.Add(new Drink()
+            //{ name = "Cola", price = 1.5, size = 'M', iced = true });
+
+            //menu.Add(new Drink()
+            //{ name = "Lemonade", price = 2, size = 'M', iced = true });
+            //menu.Add(new Drink()
+            //{ name = "Smothie", price = 3, size = 'M', iced = true });
+
+        }
+
+        private void btnMainMenu_Click(object sender, EventArgs e)
+        {
+            frmFood.Show();
+        }
+
+        
     }
 }

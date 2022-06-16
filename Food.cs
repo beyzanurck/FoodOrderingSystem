@@ -8,6 +8,7 @@ namespace FoodOrderingSystem
 {
     class Food: MenuItem
     {
-        public double portion;
+        public bool portion;
+        public bool spicy;
     }
 }

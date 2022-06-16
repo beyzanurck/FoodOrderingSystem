@@ -9,5 +9,19 @@ namespace FoodOrderingSystem
     class Order
     {
         public List<MenuItem> orderList = new List<MenuItem>();
+
+        public void AddFood(MenuItem menu)
+        {
+            orderList.Add(menu);
+        }
+
+        public void ShowOrder()
+        {
+            foreach (var item in orderList)
+            {
+                
+            }
+        }
+
     }
 }

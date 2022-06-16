@@ -65,6 +65,7 @@
             this.btnMainMenu.TabIndex = 1;
             this.btnMainMenu.Text = "Main Menu";
             this.btnMainMenu.UseVisualStyleBackColor = true;
+            this.btnMainMenu.Click += new System.EventHandler(this.btnMainMenu_Click);
             // 
             // btnDrink
             // 
@@ -97,6 +98,7 @@
             this.Controls.Add(this.pctMainMenu);
             this.Name = "frmMain";
             this.Text = "Food Ordering System";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctMainMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctDrink)).EndInit();
             this.ResumeLayout(false);
