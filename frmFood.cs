@@ -18,7 +18,12 @@ namespace FoodOrderingSystem
         }
 
         Order order = new Order();
+        private void frmFood_Load(object sender, EventArgs e)
+        {
+            txtOrderHistory.Text = "\n\n";
+            txtOrderHistory.Font = new Font("Times New Roman", 8.0f);
 
+        }
         private Food foodFactory(string Name)
         {
             //Constructor class içerisinde ilk oluşturulurken cağrılan fonksiyona denir
@@ -51,6 +56,59 @@ namespace FoodOrderingSystem
 
             txtOrderHistory.Text += String.Format("Order: {0}\nPrice: ${1}\n", Hamburger.name, Hamburger.price);
         }
+        private void btnOrderCB_Click(object sender, EventArgs e)
+        {
+            Food CheeseBurger = foodFactory("Cheese Burger");
+            if (checkCBSpicy.Checked == false) { CheeseBurger.spicy = false; }
+            else
+            {
+                CheeseBurger.spicy = true;
+                CheeseBurger.name += " w/spicy";
+            }
+
+            if (checkCBDouble.Checked == false) { CheeseBurger.portion = false; }
+            else
+            {
+                CheeseBurger.portion = true;
+                CheeseBurger.name += " -Double-";
+                CheeseBurger.price += 1;
+
+            }
+
+            order.AddFood(CheeseBurger);
+
+            txtOrderHistory.Text += String.Format("Order: {0}\nPrice: ${1}\n", CheeseBurger.name, CheeseBurger.price);
+        }
+
+        private void btnOrderSha_Click(object sender, EventArgs e)
+        {
+            Food Shawarma = foodFactory("Shawarma");
+
+            if (checkShaSpicy.Checked == false) { Shawarma.spicy = false; }
+            else
+            {
+                Shawarma.spicy = true;
+                Shawarma.name += " w/spicy";
+            }
+
+            if (checkShaDouble.Checked == false) { Shawarma.portion = false; }
+            else
+            {
+                Shawarma.portion = true;
+                Shawarma.name += " -Double-";
+                Shawarma.price += 1;
+            }
+
+            order.AddFood(Shawarma);
+
+            txtOrderHistory.Text += String.Format("Order: {0}\nPrice: ${1}\n", Shawarma.name, Shawarma.price);
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
        
     }
 }

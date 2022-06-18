@@ -15,13 +15,7 @@ namespace FoodOrderingSystem
             orderList.Add(menu);
         }
 
-        public void ShowOrder()
-        {
-            foreach (var item in orderList)
-            {
-                
-            }
-        }
+      
 
     }
 }

@@ -41,6 +41,8 @@
             this.checkCBSpicy = new System.Windows.Forms.CheckBox();
             this.checkShaDouble = new System.Windows.Forms.CheckBox();
             this.checkShaSpicy = new System.Windows.Forms.CheckBox();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.lblOrderHeadline = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pctShawarma)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctCheeseBurger)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctHamburger)).BeginInit();
@@ -94,6 +96,7 @@
             this.btnOrderCB.TabIndex = 1;
             this.btnOrderCB.Text = "Order";
             this.btnOrderCB.UseVisualStyleBackColor = true;
+            this.btnOrderCB.Click += new System.EventHandler(this.btnOrderCB_Click);
             // 
             // btnOrderSha
             // 
@@ -103,15 +106,16 @@
             this.btnOrderSha.TabIndex = 1;
             this.btnOrderSha.Text = "Order";
             this.btnOrderSha.UseVisualStyleBackColor = true;
+            this.btnOrderSha.Click += new System.EventHandler(this.btnOrderSha_Click);
             // 
             // txtOrderHistory
             // 
-            this.txtOrderHistory.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtOrderHistory.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtOrderHistory.Location = new System.Drawing.Point(591, 23);
             this.txtOrderHistory.Name = "txtOrderHistory";
-            this.txtOrderHistory.Size = new System.Drawing.Size(158, 330);
+            this.txtOrderHistory.Size = new System.Drawing.Size(180, 330);
             this.txtOrderHistory.TabIndex = 2;
-            this.txtOrderHistory.Text = "    What You Ordered   ";
+            this.txtOrderHistory.Text = "";
             // 
             // checkHamDouble
             // 
@@ -173,11 +177,35 @@
             this.checkShaSpicy.Text = "Spicy";
             this.checkShaSpicy.UseVisualStyleBackColor = true;
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnBack.Location = new System.Drawing.Point(12, 23);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(50, 23);
+            this.btnBack.TabIndex = 7;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // lblOrderHeadline
+            // 
+            this.lblOrderHeadline.AutoSize = true;
+            this.lblOrderHeadline.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblOrderHeadline.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblOrderHeadline.Location = new System.Drawing.Point(631, 31);
+            this.lblOrderHeadline.Name = "lblOrderHeadline";
+            this.lblOrderHeadline.Size = new System.Drawing.Size(105, 15);
+            this.lblOrderHeadline.TabIndex = 8;
+            this.lblOrderHeadline.Text = "What You Ordered";
+            // 
             // frmFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(783, 381);
+            this.Controls.Add(this.lblOrderHeadline);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.checkShaSpicy);
             this.Controls.Add(this.checkCBSpicy);
             this.Controls.Add(this.checkHamSpicy);
@@ -193,6 +221,7 @@
             this.Controls.Add(this.pctHamburger);
             this.Name = "frmFood";
             this.Text = "Food Section";
+            this.Load += new System.EventHandler(this.frmFood_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctShawarma)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctCheeseBurger)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctHamburger)).EndInit();
@@ -216,5 +245,7 @@
         private System.Windows.Forms.CheckBox checkCBSpicy;
         private System.Windows.Forms.CheckBox checkShaDouble;
         private System.Windows.Forms.CheckBox checkShaSpicy;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label lblOrderHeadline;
     }
 }

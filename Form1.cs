@@ -17,7 +17,7 @@ namespace FoodOrderingSystem
             InitializeComponent();
         }
 
-        frmFood frmFood = new frmFood();       
+        frmFood frmFood;
 
         private void frmMain_Load(object sender, EventArgs e)
         {
@@ -33,6 +33,7 @@ namespace FoodOrderingSystem
 
         private void btnMainMenu_Click(object sender, EventArgs e)
         {
+            frmFood = new frmFood();
             frmFood.Show();
         }
 
