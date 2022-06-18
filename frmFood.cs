@@ -20,9 +20,11 @@ namespace FoodOrderingSystem
         Order order = new Order();
         private void frmFood_Load(object sender, EventArgs e)
         {
-            txtOrderHistory.Text = "\n\n";
-            txtOrderHistory.Font = new Font("Times New Roman", 8.0f);
-
+            txtOrderHistory.Font = new Font("Times New Roman", 9.0f);
+            foreach (var item in Order.orderList)
+            {
+                txtOrderHistory.Text += String.Format("Order: {0}\nPrice: ${1}\n", item.name, item.price);
+            }
         }
         private Food foodFactory(string Name)
         {
@@ -49,12 +51,15 @@ namespace FoodOrderingSystem
                 Hamburger.portion = true;
                 Hamburger.name += " -Double-";
                 Hamburger.price += 1;
-
             }
 
-            order.AddFood(Hamburger);
+            order.AddFood(Hamburger);           
 
-            txtOrderHistory.Text += String.Format("Order: {0}\nPrice: ${1}\n", Hamburger.name, Hamburger.price);
+            txtOrderHistory.Clear();
+            foreach (var item in Order.orderList)
+            {
+                txtOrderHistory.Text += String.Format("Order: {0}\nPrice: ${1}\n", item.name, item.price);
+            }
         }
         private void btnOrderCB_Click(object sender, EventArgs e)
         {
@@ -77,7 +82,11 @@ namespace FoodOrderingSystem
 
             order.AddFood(CheeseBurger);
 
-            txtOrderHistory.Text += String.Format("Order: {0}\nPrice: ${1}\n", CheeseBurger.name, CheeseBurger.price);
+            txtOrderHistory.Clear();
+            foreach (var item in Order.orderList)
+            {
+                txtOrderHistory.Text += String.Format("Order: {0}\nPrice: ${1}\n", item.name, item.price);
+            }
         }
 
         private void btnOrderSha_Click(object sender, EventArgs e)
@@ -101,14 +110,16 @@ namespace FoodOrderingSystem
 
             order.AddFood(Shawarma);
 
-            txtOrderHistory.Text += String.Format("Order: {0}\nPrice: ${1}\n", Shawarma.name, Shawarma.price);
+            txtOrderHistory.Clear();
+            foreach (var item in Order.orderList)
+            {
+                txtOrderHistory.Text += String.Format("Order: {0}\nPrice: ${1}\n", item.name, item.price);
+            }
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-       
     }
 }

@@ -111,9 +111,9 @@
             // txtOrderHistory
             // 
             this.txtOrderHistory.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtOrderHistory.Location = new System.Drawing.Point(591, 23);
+            this.txtOrderHistory.Location = new System.Drawing.Point(591, 60);
             this.txtOrderHistory.Name = "txtOrderHistory";
-            this.txtOrderHistory.Size = new System.Drawing.Size(180, 330);
+            this.txtOrderHistory.Size = new System.Drawing.Size(180, 293);
             this.txtOrderHistory.TabIndex = 2;
             this.txtOrderHistory.Text = "";
             // 
@@ -180,9 +180,10 @@
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnBack.Location = new System.Drawing.Point(12, 23);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(50, 23);
+            this.btnBack.Size = new System.Drawing.Size(58, 26);
             this.btnBack.TabIndex = 7;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -190,14 +191,16 @@
             // 
             // lblOrderHeadline
             // 
-            this.lblOrderHeadline.AutoSize = true;
-            this.lblOrderHeadline.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblOrderHeadline.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblOrderHeadline.Location = new System.Drawing.Point(631, 31);
+            this.lblOrderHeadline.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblOrderHeadline.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblOrderHeadline.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblOrderHeadline.ForeColor = System.Drawing.Color.Black;
+            this.lblOrderHeadline.Location = new System.Drawing.Point(613, 23);
             this.lblOrderHeadline.Name = "lblOrderHeadline";
-            this.lblOrderHeadline.Size = new System.Drawing.Size(105, 15);
+            this.lblOrderHeadline.Size = new System.Drawing.Size(145, 26);
             this.lblOrderHeadline.TabIndex = 8;
             this.lblOrderHeadline.Text = "What You Ordered";
+            this.lblOrderHeadline.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmFood
             // 
