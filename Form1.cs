@@ -21,8 +21,6 @@ namespace FoodOrderingSystem
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-
-
             //menu.Add(new Drink()
             //{ name = "Cola", price = 1.5, size = 'M', iced = true });
 

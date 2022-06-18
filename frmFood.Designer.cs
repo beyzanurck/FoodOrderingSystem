@@ -193,7 +193,6 @@
             this.Controls.Add(this.pctHamburger);
             this.Name = "frmFood";
             this.Text = "Food Section";
-            this.Load += new System.EventHandler(this.frmFood_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctShawarma)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctCheeseBurger)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctHamburger)).EndInit();

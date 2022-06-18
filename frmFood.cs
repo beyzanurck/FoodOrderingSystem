@@ -18,47 +18,38 @@ namespace FoodOrderingSystem
         }
 
         Order order = new Order();
-        List<MenuItem> menu = new List<MenuItem>();
 
-        private void frmFood_Load(object sender, EventArgs e)
+        private Food foodFactory(string Name)
         {
-            menu.Add(new Food()
-            { name = "Hamburger", price = 6, portion = false, spicy = false });
-            menu.Add(new Food()
-            { name = "Cheese Burger", price = 8, portion = false, spicy = false });
-            menu.Add(new Food()
-            { name = "Shawarma", price = 7, portion = false, spicy = false });
-          
+            //Constructor class içerisinde ilk oluşturulurken cağrılan fonksiyona denir
+            //Factory ise genel olarak farklı class lar oluşturmak için kullanılır.
+            if (Name == "Hamburger") return new Food() { name = "Hamburger", price = 6, portion = false, spicy = false };
+            else if (Name == "Cheese Burger") return new Food() { name = "Cheese Burger", price = 8, portion = false, spicy = false };
+            else return new Food() { name = "Shawarma", price = 7, portion = false, spicy = false };
         }
 
         private void btnOrderHam_Click(object sender, EventArgs e)
         {
-            foreach (var item in menu)
+            Food Hamburger = foodFactory("Hamburger");
+            if (checkHamSpicy.Checked == false) { Hamburger.spicy = false; }
+            else
             {
-                if ("Hamburger" == item.name)
-                {
-                    if (checkHamSpicy.Checked == false) { ((Food)item).spicy = false; }
-                    else 
-                    { 
-                        ((Food)item).spicy = true;
-                        item.name += " w/spicy";
-                    }
-
-                    if (checkHamDouble.Checked == false) { ((Food)item).portion = false; }
-                    else
-                    { 
-                        ((Food)item).portion = true;
-                        item.name += " -Double-";
-                        item.price += 1;
-
-                    }
-
-                    order.AddFood(item);
-
-                    txtOrderHistory.Text += String.Format("Order: {0}\nPrice: ${1}", item.name, item.price);
-                }
+                Hamburger.spicy = true;
+                Hamburger.name += " w/spicy";
             }
-            
+
+            if (checkHamDouble.Checked == false) { Hamburger.portion = false; }
+            else
+            {
+                Hamburger.portion = true;
+                Hamburger.name += " -Double-";
+                Hamburger.price += 1;
+
+            }
+
+            order.AddFood(Hamburger);
+
+            txtOrderHistory.Text += String.Format("Order: {0}\nPrice: ${1}\n", Hamburger.name, Hamburger.price);
         }
        
     }

@@ -63,7 +63,7 @@
             this.btnMainMenu.Name = "btnMainMenu";
             this.btnMainMenu.Size = new System.Drawing.Size(107, 29);
             this.btnMainMenu.TabIndex = 1;
-            this.btnMainMenu.Text = "Main Menu";
+            this.btnMainMenu.Text = "Food";
             this.btnMainMenu.UseVisualStyleBackColor = true;
             this.btnMainMenu.Click += new System.EventHandler(this.btnMainMenu_Click);
             // 
