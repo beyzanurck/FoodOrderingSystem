@@ -75,6 +75,7 @@
             this.btnDrink.TabIndex = 1;
             this.btnDrink.Text = "Drink";
             this.btnDrink.UseVisualStyleBackColor = true;
+            this.btnDrink.Click += new System.EventHandler(this.btnDrink_Click);
             // 
             // lblName
             // 

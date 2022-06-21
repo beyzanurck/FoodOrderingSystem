@@ -18,6 +18,7 @@ namespace FoodOrderingSystem
         }
 
         frmFood frmFood;
+        frmDrink frmDrink;
 
         private void frmMain_Load(object sender, EventArgs e)
         {
@@ -37,6 +38,10 @@ namespace FoodOrderingSystem
             frmFood.Show();
         }
 
-        
+        private void btnDrink_Click(object sender, EventArgs e)
+        {
+            frmDrink = new frmDrink();
+            frmDrink.Show();
+        }
     }
 }
