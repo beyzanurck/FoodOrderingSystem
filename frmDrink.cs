@@ -172,5 +172,10 @@ namespace FoodOrderingSystem
                 txtOrderHistory.Text += String.Format("Order: {0}\nPrice: ${1}\n", item.name, item.price);
             }
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
