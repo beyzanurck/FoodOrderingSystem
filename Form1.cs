@@ -16,9 +16,11 @@ namespace FoodOrderingSystem
         {
             InitializeComponent();
         }
-
+        Order order = new Order();
         frmFood frmFood;
         frmDrink frmDrink;
+
+        DateTime moment = new DateTime();
 
         private void frmMain_Load(object sender, EventArgs e)
         {
@@ -42,6 +44,27 @@ namespace FoodOrderingSystem
         {
             frmDrink = new frmDrink();
             frmDrink.Show();
+        }
+
+        private void btnCompOrder_Click(object sender, EventArgs e)
+        {
+            double price = 0;
+
+            foreach (var item in Order.orderList)
+            {
+                price += item.price;
+            }
+
+            moment = FormatTime();
+
+            MessageBox.Show("Your total price is: $" + price.ToString() +"\n"+ moment.ToString());
+
+            this.Close();
+        }
+
+        public static DateTime FormatTime()
+        {
+            return DateTime.UtcNow.ToLocalTime();
         }
     }
 }

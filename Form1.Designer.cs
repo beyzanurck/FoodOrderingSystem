@@ -33,6 +33,7 @@
             this.btnMainMenu = new System.Windows.Forms.Button();
             this.btnDrink = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
+            this.btnCompOrder = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pctMainMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctDrink)).BeginInit();
             this.SuspendLayout();
@@ -87,11 +88,22 @@
             this.lblName.TabIndex = 3;
             this.lblName.Text = "Welcome";
             // 
+            // btnCompOrder
+            // 
+            this.btnCompOrder.Location = new System.Drawing.Point(275, 358);
+            this.btnCompOrder.Name = "btnCompOrder";
+            this.btnCompOrder.Size = new System.Drawing.Size(123, 33);
+            this.btnCompOrder.TabIndex = 4;
+            this.btnCompOrder.Text = "Complete The Order";
+            this.btnCompOrder.UseVisualStyleBackColor = true;
+            this.btnCompOrder.Click += new System.EventHandler(this.btnCompOrder_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(686, 381);
+            this.ClientSize = new System.Drawing.Size(686, 416);
+            this.Controls.Add(this.btnCompOrder);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.btnDrink);
             this.Controls.Add(this.btnMainMenu);
@@ -114,6 +126,7 @@
         private System.Windows.Forms.Button btnMainMenu;
         private System.Windows.Forms.Button btnDrink;
         private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Button btnCompOrder;
     }
 }
 
